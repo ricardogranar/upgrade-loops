@@ -85,6 +85,10 @@ const alien = {
 }
 
 
+for(const info in alien){
+    console.log(info + ": " + alien[info]);
+}
+
 
 
 //**Iteración #5: Probando For**
