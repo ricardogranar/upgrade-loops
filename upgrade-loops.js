@@ -4,6 +4,19 @@
 //Usa la función .***includes*** de javascript.
 
 const products = ['Camiseta de Pokemon', 'Pantalón coquinero', 'Gorra de gansta', 'Camiseta de Basket', 'Cinrurón de Orión', 'AC/DC Camiseta']
+for (let i = 0; i < products.length; i++) {
+    if(products[i].toLocaleLowerCase().includes("Camiseta".toLocaleLowerCase())){
+    console.log(products[i])
+    }  
+
+}
+}
+
+displayEqualsIteams(products)
+
+
+
+
 
 //**Iteración #2: Condicionales avanzados**
 
@@ -17,7 +30,29 @@ const alumns = [
 		{name: 'Juan Miranda', T1: false, T2: true, T3: true},
 		{name: 'Alfredo Blanco', T1: false, T2: false, T3: false},
 		{name: 'Raquel Benito', T1: true, T2: true, T3: true}
-]
+    ]
+    
+    for (let e = 0; e < alumns.length; e++) {
+
+        if (
+      
+          (alumns[e]["T1"] && alumns[e]["T2"]) ||
+      
+          (alumns[e]["T1"] && alumns[e]["T3"]) ||
+      
+          (alumns[e]["T2"] && alumns[e]["T3"])
+      
+        ) {
+      
+          alumns[e]["isApproved"] = true;
+      
+        } else {
+      
+          alumns[e]["isApproved"] = false;
+      
+        }
+      
+      }
 
 
 //**Iteración #3: Probando For...of**
@@ -26,9 +61,17 @@ const alumns = [
 
 //Puedes usar este array:
 
-```jsx
+
 const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar']
-```
+
+for (const cities of placesToTravel) {
+    console.log (placesToTravel);
+    
+}
+
+
+
+
 
 //**Iteración #4: Probando For...in**
 
@@ -40,6 +83,8 @@ const alien = {
     planet: 'Eden',
     weight: '259kg'
 }
+
+
 
 
 //**Iteración #5: Probando For**
@@ -64,4 +109,16 @@ const toys = [
 
 //**Iteración #7: For...of avanzado**
 
-Usa un bucle **for...of** para recorrer todos los juguetes y añade los que tengan más de 15 ventas (sellCount) al array popularToys. Imprimelo por consola.. Puedes usar este array:
+Usa un bucle **for...of** para recorrer todos los juguetes y añade los que tengan más de 15 ventas (sellCount) al array popularToys. Imprimelo por consola..
+
+Puedes usar este array:
+
+const popularToys = [];
+const toys = [
+	{id: 5, name: 'Buzz MyYear', sellCount: 10}, 
+	{id: 11, name: 'Action Woman', sellCount: 24}, 
+	{id: 23, name: 'Barbie Man', sellCount: 15}, 
+	{id: 40, name: 'El gato con Guantes', sellCount: 8},
+	{id: 40, name: 'El gato felix', sellCount: 35}
+]
+
