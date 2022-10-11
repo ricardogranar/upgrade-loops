@@ -125,6 +125,14 @@ const toys = [
 {id: 40, name: 'El gato felix'}
 ]
 
+for(let i = 0; i < toys.length; i++){
+    let toy = toys[i];
+    if(toy.name.includes("gato")){
+        toys.splice(i,1);
+        i--;
+    } 
+}
+console.log(toys);
 
 //**Iteración #7: For...of avanzado**
 
@@ -141,3 +149,9 @@ const toys = [
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
 
+
+for(const toy of toys){
+    if(toy.sellCount > 15) popularToys.push(toy);
+}
+
+console.log(popularToys);
